@@ -247,7 +247,6 @@ section {
             font-family: inherit;
             text-align: left;
         }
-
         // .center {
         //     /*background-color: red;*/
         //     font-size: 2rem;
@@ -259,7 +258,6 @@ section {
             font-family: inherit;
             
         }
-
         p {
             margin: 1.5rem 0;
             line-height: 2rem;
@@ -302,7 +300,6 @@ body {
     padding: 50px 0;
     text-align: left;
 }
-
 .right-header .transparent-button {
     padding: 12px;
     background: transparent;
@@ -320,24 +317,19 @@ body {
     position: relative;
     transition: transform 0.3s;
 }
-
 .transparent-button:hover {
     transform: scale(1.1);
 }
-
 .transparent-button:active {
     transform: scale(0.9);
 }
-
 @keyframes buttonPop {
     0% {
         transform: scale(0);
     }
-
     50% {
         transform: scale(1.2);
     }
-
     100% {
         transform: scale(1);
     }
