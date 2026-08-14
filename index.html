@@ -3,1007 +3,301 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Soma Pragnya — Portfolio</title>
+    <meta name="description"
+        content="Soma Pragnya — software & web developer, technology enthusiast, and startup explorer. Projects, experience and ways to get in touch.">
     <link rel="icon" href="pictures/star3.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-wTl+nZQBB43GSUey+xVt0tx47cwXHLtskpHABIL2r2PtySJP1KUQPVX1h88KeC6Q5Kv/LVOlGzv9MT2J4eBoKw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="main-content">
+<body>
+    <!-- animated 3D background -->
+    <div class="bg-scene" aria-hidden="true">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
 
+    <!-- progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
+    <!-- navbar -->
+    <header class="navbar" id="navbar">
+        <a href="#home" class="brand">SP<span>.</span></a>
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Journey</a>
+            <a href="#work" class="nav-link">Work</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
 
-    <header class="container header active" id="home">
-        <video id="video-background" autoplay loop muted>
-            <source src="backgroungvd1.mp4" type="video/mp4">
-
-        </video>
-
-
-
-        <div class="header-content">
-            <div class="right-header">
-
-                <span class="name">Hey there, curious minds!! <br><br>Welcome to my creative playground, where art and
-                    code dance in perfect harmony. <br><br>Prepare to be dazzled!</span>
-                <br>
-                <span class="name"> I am <span class="purple">Soma Pragnya</span>,</span>
-                <br>
-                <span id="element"></span>
-
-                <div class="buttons">
-                    <button class="transparent-button" onclick="window.open('https://drive.google.com/file/d/1AJuu6Wxu4DTeVWKsRmxnP3jPFGBOB1Do/view?usp=share_link', '_blank')">View
-                        Resume</button>
-                    <button class="transparent-button"
-                        onclick="window.open('https://github.com/PragnyaPrakash' , '_blank')">Visit Github</button>
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-inner tilt-scene">
+                <p class="eyebrow reveal">Hey there, curious minds 👋</p>
+                <h1 class="hero-title reveal">
+                    I'm <span class="grad-text">Soma&nbsp;Pragnya</span>
+                </h1>
+                <h2 class="hero-role reveal">
+                    <span id="typed"></span><span class="cursor">|</span>
+                </h2>
+                <p class="hero-sub reveal">
+                    Welcome to my creative playground — where art and code dance in perfect harmony.
+                    I turn ideas into things people can use, and I love the space where startups,
+                    software and storytelling meet.
+                </p>
+                <div class="hero-actions reveal">
+                    <a class="btn btn-primary"
+                        href="https://drive.google.com/file/d/1AJuu6Wxu4DTeVWKsRmxnP3jPFGBOB1Do/view?usp=share_link"
+                        target="_blank" rel="noopener">View Résumé <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    <a class="btn btn-ghost" href="https://github.com/PragnyaPrakash" target="_blank"
+                        rel="noopener">GitHub <i class="fab fa-github"></i></a>
+                </div>
+                <div class="hero-socials reveal">
+                    <a href="https://www.linkedin.com/in/somapragnya" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/PragnyaPrakash" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://instagram.com/pragnya.prakash" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="mailto:somapragnya@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
                 </div>
             </div>
-        </div>
-<hr>
+            <a href="#about" class="scroll-hint" aria-label="Scroll down">
+                <span></span>
+            </a>
+        </section>
 
-        <footer>
-            <div class="left-content">
-              <p>Pragnya's Portfolio</p>
-              <!-- Add your portfolio content here -->
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="section-head reveal">
+                <span class="section-index">01</span>
+                <h2 class="section-title">About <span class="grad-text">me</span></h2>
             </div>
-            <div class="middle-content">
-              <p>Copyright &copy; 2023 SP | All rights reserved</p>
-            </div>
-            <div class="right-content">
 
-                <ul class="social-icons">
-                   
-                    <li>
-                        <a href="https://github.com/PragnyaPrakash" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://instagram.com/pragnya.prakash?igshid=NGExMmI2YTkyZg==" target="_blank">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                    <a href="https://www.linkedin.com/in/somapragnya" target="_blank">
-
-
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                </ul>
-              <!-- <a href="https://www.facebook.com"><img class="social-icon" src="facebook-icon.png" alt="Facebook"></a>
-              <a href="https://www.twitter.com"><img class="social-icon" src="twitter-icon.png" alt="Twitter"></a> -->
-              <!-- Add more social media icons as needed -->
-            </div>
-          </footer>
-          
-
-
-
-
-
-
-        <!-- <footer>
-            <hr>
-           
-            <div class="footer-container">
-                
-                <div class="footer-section">
-                    <p>Pragnya's Portfolio</p>
+            <div class="about-grid">
+                <div class="card glass about-bio reveal">
+                    <h3>Personal snapshot</h3>
+                    <p>
+                        I'm an incredibly organized person who thrives on transforming ideas into reality,
+                        fueled by an appetite for innovation and entrepreneurship. Beyond lines of code, you'll
+                        find me immersed in visual storytelling — as a photography enthusiast and video-editing
+                        maestro, I use my lenses and editing tools to capture moments and bring narratives to life.
+                    </p>
+                    <p>
+                        Whether I'm coding something clean or capturing the perfect shot, I'm always chasing that
+                        blend of <strong>creativity</strong> and <strong>functionality</strong>.
+                    </p>
                 </div>
-                <div class="footer-section" class="footer-rights">
-                    <p> Copyright &copy; 2023 SP | All rights reserved</p>
-                </div>
-                <div class="footer-section">
-                    <ul class="social-icons">
-                       
-                        <li>
-                            <a href="https://github.com/PragnyaPrakash" target="_blank">
-                                <i class="fab fa-github"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/your-profile" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="www.linkedin.com/in/
-                          somapragnya
-                          
-                          " target="_blank">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
+
+                <div class="card glass about-skills reveal">
+                    <h3>Skills &amp; platforms</h3>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-java"></i>Java</li>
+                        <li><i class="fas fa-database"></i>SQL</li>
+                        <li><i class="fab fa-cuttlefish"></i>C / C++</li>
+                        <li><i class="fab fa-python"></i>Python</li>
+                        <li><i class="fab fa-html5"></i>HTML5</li>
+                        <li><i class="fab fa-css3-alt"></i>CSS3</li>
+                        <li><i class="fab fa-js"></i>JavaScript</li>
+                        <li><i class="fab fa-android"></i>Android</li>
+                        <li><i class="fas fa-code"></i>VS Code</li>
+                        <li><i class="fas fa-mug-hot"></i>NetBeans</li>
                     </ul>
                 </div>
-                
-            </div>
-        </footer> -->
-    </header>
-    <main>
-        <!-- <video id="video-background" autoplay loop muted>
-            <source src="backgroungvd1.mp4" type="video/mp4">
-
-        </video> -->
-        <section class="container about" id="about">
-            <video id="video-background" autoplay loop muted>
-                <source src="backgroungvd1.mp4" type="video/mp4">
-
-            </video>
-            <div class="main-title">
-                <h2>About <span>me</span><span class="bg-text">my stats</span></h2>
-            </div>
-
-            <div class="about-container">
-                <div class="left-about">
-
-                    <div class="item2">PERSONAL SNAPSHOT</div>
-                    <br>
-                    <p>
-                        I am an incredibly organized individual.
-                        I thrive on transforming ideas into reality, fueling my insatiable appetite for innovation and
-                        entrepreneurship.
-                        But that's not all! Beyond lines of code and startup landscapes, you'll find me immersed in the
-                        captivating world of visual storytelling.<br><br> As a photography enthusiast and video editing
-                        maestro, I wield my lenses and editing tools to capture mesmerizing moments and bring narratives
-                        to life.
-                        So, whether I'm coding lines of brilliance or capturing the perfect shot, I'm always seeking
-                        that elusive blend of creativity and functionality.
-                    </p>
-                    <!-- <div class="btn-con">
-                        <a href="#" class="main-btn">
-                            <span class="btn-text">Download CV</span>
-                            <span class="btn-icon"><i class="fas fa-download"></i></span>
-                        </a>
-                    </div> -->
-                </div>
-
-
-
-                <div class="right-about">
-
-                    <!-- <div class="grid-heading">
-                        <h4>Grid Heading</h4>
-                    </div> -->
-
-
-                    <!-- my exp -->
-                    <div class="item1">SKILL SET / PLATFORMS</div>
-
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-java skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fas fa-database skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-cuttlefish skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-html5 skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-css3 skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-
-                        <div class="abt-text">
-                            <i class="fab fa-python skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <img src="pictures/vscode.png" alt="vscode" class="bordered-image">
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <img src="pictures/netbeans.png" alt="netbeans" class="bordered-image1">
-                        </div>
-                    </div>
-
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-android skills-icon"></i>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-r-project skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-r-project skills-icon"></i>
-                        </div>
-                    </div> -->
-                    <!-- <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-r-project skills-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-r-project skills-icon"></i>
-                        </div>
-                    </div> -->
-                    <!-- <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-python python-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fas fa-database sql-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-java java-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-cuttlefish c-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-cuttlefish cpp-icon"></i>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <i class="fab fa-r-project r-icon"></i>
-                        </div>
-                    </div> -->
-
-                </div>
-
-
-
-
-
-                <!-- <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">650+</p>
-                            <p class="small-text">Projects <br /> Completed</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">10+</p>
-                            <p class="small-text">Years of <br /> experience</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">300+</p>
-                            <p class="small-text">Happy <br /> Clients</p>
-                        </div>
-                    </div>
-                    <div class="about-item">
-                        <div class="abt-text">
-                            <p class="large-text">400+</p>
-                            <p class="small-text">Customer <br /> reviews</p>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-            <hr>
-            <div class="about-stats">
-                <!-- <h4 class="stat-title">Work experience</h4> -->
-                <div class="item3">WORK EXPERIENCE</div>
-                <div class="centered-section">
-                    <div>
-                        <!-- <h2>Your Section Title</h2> -->
-                        <!-- <pre> -->
-                            <span class="name1">
-                            <b>Organization:</b> The Sparks Foundation<br>
-                            <b>Duration:</b> March 2023 - April 2023<br>
-                            <b>Domain:</b> App Development<br>
-                            <b>Tool:</b> Android Studio<br>
-                            <b>Language:</b> Java<br>
-                            <b>Task:</b>  Basic Banking App<br><br>
-
-                            Developed a simple mobile app that consists the following:<br><br>
-
-                            1. Started with creating dummy data in the mobile (SQLite) database, for up to 10 users. 
-                               The user table will have basic fields such as name, email, current balance, etc. 
-                               Transfers table will record all transfers happened.<br>
-                            2. Flow: Home Screen > View all Customers> Select and View one Customer> Transfer Money> 
-                               Select customer to transferto > View all Customers.<br>
-                            3. No Login Page. No Customer Creation. Only transfer of money between multiple customers.<br>
-                        </span>
-                            <!-- </pre> --><br>
-                            <br>
-                            <br>
-                            <div class="button-container"></div>
-                            <a href="https://www.linkedin.com/posts/somapragnya_hey-there-connections-i-am-pleased-to-inform-activity-7047563430593011712-KqRe?utm_source=share&utm_medium=member_desktop" target="_blank" class="transparent-button1">
-                             Details
-                            </a>
-                    </div>
-                </div>
-                <!-- <div class="progress-bars">
-                    <div class="progress-bar">
-                        <p class="prog-title">html5</p>
-                        <div class="progress-con">
-                            <p class="prog-text">80%</p>
-                            <div class="progress">
-                                <span class="html"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">css3</p>
-                        <div class="progress-con">
-                            <p class="prog-text">95%</p>
-                            <div class="progress">
-                                <span class="css"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">javascript</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="js"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">ReactJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">75%</p>
-                            <div class="progress">
-                                <span class="react"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">NodeJS</p>
-                        <div class="progress-con">
-                            <p class="prog-text">87%</p>
-                            <div class="progress">
-                                <span class="node"></span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="progress-bar">
-                        <p class="prog-title">Python</p>
-                        <div class="progress-con">
-                            <p class="prog-text">70%</p>
-                            <div class="progress">
-                                <span class="python"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-
-
-
-            <!-- my exp -->
-            <div class="timeline">
-                <div class="left-timeline">
-                    <h4 class="stat-title">Education</h4>
-                    <div class="timeline-item">
-                        <div class="tl-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <p class="tl-duration">2019 - 2024</p>
-                        <h5>Degree<span> - VIT CHENNAI</span></h5>
-                        <p>
-                            Integrated M.Tech in Software Engineering
-                            <br>
-                            CGPA: 8.18
-                        </p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="tl-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <p class="tl-duration">2017 - 2019</p>
-                        <h5>Senior Secondary<span> - Narayana Junior College</span></h5>
-                        <p>
-                            M.P.C
-                            <br>
-                            Percentage: 95.6
-                        </p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="tl-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <p class="tl-duration">2016 - 2017</p>
-                        <h5>Secondary School<span> - Akshara High School</span></h5>
-                        <p>
-                            class 10
-                            <br>
-                            GPA: 9.7
-                        </p>
-                    </div>
-                </div>
-                <div class="right-timeline">
-                    <h4 class="stat-title">Volunteering/Achievements</h4>
-                    <div class="timeline-item">
-                        <div class="tl-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <p class="tl-duration">2022 - present</p>
-                        <h5>Director of design and content<span> - Uddeshya club | VIT CHENNAI</span></h5>
-                        <p>
-                            Maintained quality standards in design and content, by providing guidance.
-                        </p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="tl-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <p class="tl-duration">2022 - present</p>
-                        <h5>Social media manager<span> - Uddeshya club </span></h5>
-                        <p>
-                            Used social media strategies to promote & enhance club events.
-                        </p>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="tl-icon">
-                            <i class="fas fa-briefcase"></i>
-                        </div>
-                        <p class="tl-duration">2023</p>
-                        <h5>Codeathon<span> - Neo</span></h5>
-                        <p>
-                            Finalist of NeoCodeathon
-                        </p>
-                    </div>
-
-                </div>
-
-
-
-
-            </div>
-
-
-            <!-- till here -->
-
-
-
-
-
-
-            <!-- 
-            <h4 class="stat-title">Education</h4>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2019 - 2024</p>
-                    <h5>Web Developer<span> - Vircrosoft</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2008 - 2011</p>
-                    <h5>Software Engineer<span> - Boogle, Inc.</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2016 - 2017</p>
-                    <h5>C++ Programmer<span> - Slime Tech</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2009 - 2013</p>
-                    <h5>Business Degree<span> - Sussex University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2013 - 2016</p>
-                    <h5>Computer Science Degree<span> - Brookes University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-                <div class="timeline-item">
-                    <div class="tl-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <p class="tl-duration">2017 - present</p>
-                    <h5>3d Animation<span> - Brighton University</span></h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quasi vero fugit.
-                    </p>
-                </div>
-            </div> -->
-        </section>
-        <section class="container" id="portfolio">
-            <video id="video-background" autoplay loop muted>
-                <source src="backgroungvd1.mp4" type="video/mp4">
-
-            </video>
-            <div class="main-title">
-                <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
-            </div>
-            <p class="port-text">
-                Here is some of my work that I've done in various programming languages.
-            </p>
-            <div class="portfolios">
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="pictures/vehicle.jfif" alt="vehicle tracking system" class="vehicle1">
-                    </div>
-                    <div class="blog-text">
-                        <h4>
-                            VEHICLE TRACKING SYSTEM
-                        </h4>
-                        <p>
-                            Designed a tracking system to view the location of a vehicle, the in-vehicle device works using GPS(to get
-                            geographic coordinates), GSM, and GPRS (to transmit and update the vehicle location in database).
-                            
-                        </p>
-                    </div>
-                    <!-- <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div> -->
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="pictures/road.jfif" alt="">
-                    </div>
-                    <div class="blog-text">
-                        <h4>
-                            ROAD SIGN RECOGNITION USING NEURAL NETWORKS
-                        </h4>
-                        <p>
-                            Developed a comprehensive approach that effectively detects and recognizes traffic signs by employing
-techniques for image preprocessing, as well as employing methods for sign detection, recognition, and categorization.
-                        </p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/PragnyaPrakash/signboard_detection_cnn" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="pictures/securit.jpg" alt="">
-                    </div>
-                    <div class="blog-text">
-                        <h4>
-                            E-CYBER SECURITY PORTAL
-                        </h4>
-                        <p>
-                            Developed a portal for citizens to file a complaint and police officers to check the number of cases filed in their
-respective cadre and update the investigation status.
-                            
-                        </p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/PragnyaPrakash/e-cyber_security_portal" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="pictures/hotel.png" alt="">
-                    </div>
-                    <div class="blog-text">
-                        <h4>
-                            HOTEL MANAGEMENT SYTSEM 
-                        </h4>
-                        <p>
-                            JAVA NETBEANS
-                            
-                        </p>
-                    </div>
-                    <!-- <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div> -->
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="pictures/port.png" alt="">
-                    </div>
-                    <div class="blog-text">
-                        <h4>
-                            MY PORTFOLIO
-                        </h4>
-                        <p>
-                            Designed and developed a personal portfolio website using HTML, CSS, and JavaScript to showcase my skills,
-                            experience, and projects.
-                            
-                        </p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/PragnyaPrakash/portfolio" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <div class="image">
-                        <img src="pictures/bank.png" alt="">
-                    </div>
-                    <div class="blog-text">
-                        <h4>
-                            BASIC BANKING APP
-                        </h4>
-                        <p>
-                          
-
-                            Developed a basic banking app in android studio.
-                            
-                            
-                        </p>
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="https://github.com/PragnyaPrakash/Bankingwebapp" target="_blank" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="portfolio-item">
-                    <div class="image">
-                        <img src="img/port7.jpg" alt="">
-                    </div>
-                    <div class="hover-items">
-                        <h3>Project Source</h3>
-                        <div class="icons">
-                            <a href="#" class="icon">
-                                <i class="fab fa-github"></i>
-                            </a>
-
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
-        <section class="container" id="blogs">
-            <video id="video-background" autoplay loop muted>
-                <source src="backgroungvd1.mp4" type="video/mp4">
 
-            </video>
-            <div class="blogs-content">
-                <div class="main-title">
-                    <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
+        <!-- EXPERIENCE / JOURNEY -->
+        <section class="section" id="experience">
+            <div class="section-head reveal">
+                <span class="section-index">02</span>
+                <h2 class="section-title">My <span class="grad-text">journey</span></h2>
+            </div>
+
+            <!-- highlighted experience -->
+            <div class="card glass experience-feature reveal">
+                <div class="exp-tag">Experience</div>
+                <h3>App Development Intern — The Sparks Foundation</h3>
+                <p class="exp-meta">Mar 2023 – Apr 2023 · Android Studio · Java</p>
+                <p>
+                    Built a <strong>Basic Banking App</strong>: seeded a local SQLite database with dummy data for
+                    up to 10 users (name, email, balance) and a transfers table, then implemented the full flow —
+                    view all customers → view one customer → transfer money → pick recipient → back to the list —
+                    handling money transfers between customers end to end.
+                </p>
+                <a class="btn btn-ghost sm"
+                    href="https://www.linkedin.com/posts/somapragnya_hey-there-connections-i-am-pleased-to-inform-activity-7047563430593011712-KqRe"
+                    target="_blank" rel="noopener">Details <i class="fas fa-arrow-up-right-from-square"></i></a>
+            </div>
+
+            <div class="journey-cols">
+                <div class="timeline reveal">
+                    <h3 class="timeline-heading"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="tl-item">
+                        <span class="tl-date">2019 – 2024</span>
+                        <h4>Integrated M.Tech, Software Engineering</h4>
+                        <p>VIT Chennai · CGPA 8.18</p>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date">2017 – 2019</span>
+                        <h4>Senior Secondary (M.P.C)</h4>
+                        <p>Narayana Junior College · 95.6%</p>
+                    </div>
+                    <div class="tl-item">
+                        <span class="tl-date">2016 – 2017</span>
+                        <h4>Secondary School</h4>
+                        <p>Akshara High School · GPA 9.7</p>
+                    </div>
                 </div>
-                <br>
-                <span class="name">I've just created a blog section, but it's not finished yet. I'll be working on it more in the future.</span>
-                <div class="blogs">
-                    <div class="blog">
-                        <img src="" alt="">
-                        <div class="blog-text">
-                            <h4>
 
-                            </h4>
-                            <p>
-
-                            </p>
-                        </div>
+                <div class="timeline reveal">
+                    <h3 class="timeline-heading"><i class="fas fa-award"></i> Volunteering &amp; achievements</h3>
+                    <div class="tl-item">
+                        <span class="tl-date">2022 – present</span>
+                        <h4>Director of Design &amp; Content</h4>
+                        <p>Uddeshya Club, VIT Chennai — upheld quality standards in design and content through guidance.</p>
                     </div>
-                    <div class="blog">
-                        <img src="img/blog1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-
-                            </h4>
-                            <p>
-
-                            </p>
-                        </div>
+                    <div class="tl-item">
+                        <span class="tl-date">2022 – present</span>
+                        <h4>Social Media Manager</h4>
+                        <p>Uddeshya Club — ran social strategies to promote and grow club events.</p>
                     </div>
-                    <div class="blog">
-                        <img src="img/blog2.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-
-                            </h4>
-                            <p>
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/blog3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-
-                            </h4>
-                            <p>
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port1.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-
-                            </h4>
-                            <p>
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="blog">
-                        <img src="img/port3.jpg" alt="">
-                        <div class="blog-text">
-                            <h4>
-
-                            </h4>
-                            <p>
-
-                            </p>
-                        </div>
+                    <div class="tl-item">
+                        <span class="tl-date">2023</span>
+                        <h4>Finalist — Neo Codeathon</h4>
+                        <p>Reached the finals of the NeoCodeathon.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="container contact" id="contact">
-            <video id="video-background" autoplay loop muted>
-                <source src="backgroungvd1.mp4" type="video/mp4">
 
-            </video>
-            <div class="contact-container">
-                <div class="main-title">
-                    <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-                </div>
-                <div class="contact-content-con">
-                    <div class="left-contact">
-                        <p>Social media Connects </p>
-                        <!-- <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            In, laborum numquam? Quam excepturi perspiciatis quas quasi.
-                        </p> -->
-                        <!-- <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Location</span>
-                                </div>
-                                <p>
-                                    : London, united Kingdom
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>
-                                    <span>Email</span>
-                                </div>
-                                <p>
-                                    <span>: maclinzuniversal@gmail.com</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Education</span>
-                                </div>
-                                <p>
-                                    <span>: Sussex University, East Sussex</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-user-graduate"></i>
-                                    <span>Mobile Number</span>
-                                </div>
-                                <p>
-                                    <span>: 07522670617</span>
-                                </p>
-                            </div>
-                            <div class="contact-item">
-                                <div class="icon">
-                                    <i class="fas fa-globe-africa"></i>
-                                    <span>Languages</span>
-                                </div>
-                                <p>
-                                    <span>: Afrikaans, English, Spanish</span>
-                                </p>
-                            </div>
-                        </div> -->
-                        <div class="contact-icons">
-                            <div class="contact-icon">
-                                <!-- <a href="www.facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a> -->
-                                <a href="https://www.linkedin.com/in/somapragnya" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                                <a href="https://github.com/PragnyaPrakash" target="_blank">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://instagram.com/pragnya.prakash?igshid=NGExMmI2YTkyZg==" target="_blank">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="mailto:somapragnya@gmail.com" target="_blank">
-                                    <i class="far fa-envelope"></i>
-                                    
-                                  </a>
-                                  
-                                <!-- <a href="" target="_blank">
-                                    <i class="far fa-envelope"></i>
-                                </a> -->
-                            </div>
-                        </div>
+        <!-- WORK / PROJECTS -->
+        <section class="section" id="work">
+            <div class="section-head reveal">
+                <span class="section-index">03</span>
+                <h2 class="section-title">Selected <span class="grad-text">work</span></h2>
+            </div>
+            <p class="section-lead reveal">A few things I've built across different languages and stacks.</p>
+
+            <div class="work-grid">
+                <article class="project-card tilt reveal">
+                    <div class="project-media"><img src="pictures/vehicle.jfif" alt="Vehicle tracking system"></div>
+                    <div class="project-body">
+                        <h3>Vehicle Tracking System</h3>
+                        <p>A tracking system to view a vehicle's location. The in-vehicle device uses GPS for
+                            coordinates and GSM/GPRS to transmit and update the location in a database.</p>
+                        <div class="project-tags"><span>GPS</span><span>GSM/GPRS</span><span>Embedded</span></div>
                     </div>
-                    <div class="right-contact">
-                        <p>Write to me</p>
-                        <form action="https://formspree.io/f/xyyaqyjp" method="POST" class="contact-form">
-                            <div class="input-control i-c-2">
-                                <input name="name" type="text" required placeholder="YOUR NAME">
-                                <input name="email" type="email" required placeholder="YOUR EMAIL">
-                            </div>
-                            <div class="input-control">
-                                <input name="subject" type="text" required placeholder="ENTER SUBJECT">
-                            </div>
-                            <div class="input-control">
-                                <textarea name="message" id="" cols="15" rows="8"
-                                    placeholder="Message Here..."></textarea>
-                            </div>
-                            <input type="hidden" name="_captcha" value="false">
+                </article>
 
-                            <!-- <input type="submit" value="Submit"> -->
+                <article class="project-card tilt reveal">
+                    <div class="project-media"><img src="pictures/road.jfif" alt="Road sign recognition"></div>
+                    <div class="project-body">
+                        <h3>Road Sign Recognition</h3>
+                        <p>A neural-network approach that detects and recognizes traffic signs using image
+                            preprocessing, sign detection, recognition and categorization.</p>
+                        <div class="project-tags"><span>CNN</span><span>Computer Vision</span></div>
+                        <a class="project-link" href="https://github.com/PragnyaPrakash/signboard_detection_cnn" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </article>
 
-                            <!-- <div class="submit-btn"> -->
-                            <!-- <a href="#" class="main-btn"> -->
-                            <div class="button-container">
-                                <input name="contact_btn" type="submit" class="submit-btn
-                                    " value="Submit">
-                            </div>
-                            <div id="popup-message" class="popup">
-                                <p>Your message has been submitted!</p>
-                            </div>
+                <article class="project-card tilt reveal">
+                    <div class="project-media"><img src="pictures/securit.jpg" alt="E-cyber security portal"></div>
+                    <div class="project-body">
+                        <h3>E-Cyber Security Portal</h3>
+                        <p>A portal for citizens to file complaints and for police officers to track the cases in
+                            their cadre and update investigation status.</p>
+                        <div class="project-tags"><span>Web</span><span>Portal</span></div>
+                        <a class="project-link" href="https://github.com/PragnyaPrakash/e-cyber_security_portal" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </article>
 
-                            <script>
-                                const submitButton = document.querySelector('.submit-button');
-                                const popupMessage = document.getElementById('popup-message');
+                <article class="project-card tilt reveal">
+                    <div class="project-media"><img src="pictures/bank.png" alt="Basic banking app"></div>
+                    <div class="project-body">
+                        <h3>Basic Banking App</h3>
+                        <p>An Android app that manages dummy customers and lets you transfer money between them,
+                            backed by a local SQLite database.</p>
+                        <div class="project-tags"><span>Android</span><span>Java</span><span>SQLite</span></div>
+                        <a class="project-link" href="https://github.com/PragnyaPrakash/Bankingwebapp" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </article>
 
-                                submitButton.addEventListener('click', function (event) {
-                                    event.preventDefault();
-                                    popupMessage.classList.add('show-popup');
-                                    setTimeout(function () {
-                                        popupMessage.classList.remove('show-popup');
-                                    }, 3000);
-                                });
-                            </script>
-                            <!-- <span class="btn-text">Submit</span> -->
+                <article class="project-card tilt reveal">
+                    <div class="project-media"><img src="pictures/hotel.png" alt="Hotel management system"></div>
+                    <div class="project-body">
+                        <h3>Hotel Management System</h3>
+                        <p>A desktop hotel-management application built with Java in NetBeans.</p>
+                        <div class="project-tags"><span>Java</span><span>NetBeans</span></div>
+                    </div>
+                </article>
 
-                            <!-- </a> -->
-                            <!-- </div> -->
+                <article class="project-card tilt reveal">
+                    <div class="project-media"><img src="pictures/port.png" alt="Portfolio website"></div>
+                    <div class="project-body">
+                        <h3>This Portfolio</h3>
+                        <p>A personal portfolio built with HTML, CSS and JavaScript to showcase my skills,
+                            experience and projects.</p>
+                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        <a class="project-link" href="https://github.com/PragnyaPrakash/portfolio" target="_blank" rel="noopener"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-                            <!-- <div class="submit-btn">
-                                <a href="#" class="main-btn">
-                                    <span class="btn-text">Download CV</span>
-                                    <span class="btn-icon"><i class="fas fa-download"></i></span>
-                                </a>
-                            </div> -->
-                        </form>
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+            <div class="section-head reveal">
+                <span class="section-index">04</span>
+                <h2 class="section-title">Get in <span class="grad-text">touch</span></h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="card glass contact-intro reveal">
+                    <h3>Let's build something.</h3>
+                    <p>Have an idea, a role, or just want to say hi? Drop me a message and I'll get back to you.</p>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/somapragnya" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/PragnyaPrakash" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://instagram.com/pragnya.prakash" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:somapragnya@gmail.com" aria-label="Email"><i class="far fa-envelope"></i></a>
                     </div>
                 </div>
+
+                <form class="card glass contact-form reveal" action="https://formspree.io/f/xyyaqyjp" method="POST">
+                    <div class="field-row">
+                        <input name="name" type="text" required placeholder="Your name">
+                        <input name="email" type="email" required placeholder="Your email">
+                    </div>
+                    <input name="subject" type="text" required placeholder="Subject">
+                    <textarea name="message" rows="5" required placeholder="Message…"></textarea>
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit" class="btn btn-primary">Send message <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
         </section>
     </main>
 
-    <div class="controls">
-        <div class="control active-btn" data-id="home">
-            <i class="fas fa-home"></i>
-        </div>
-        <div class="control" data-id="about">
-            <i class="fas fa-user"></i>
-        </div>
-        <div class="control" data-id="portfolio">
-            <i class="fas fa-briefcase"></i>
-        </div>
-        <div class="control" data-id="blogs">
-            <i class="far fa-newspaper"></i>
-        </div>
-        <div class="control" data-id="contact">
-            <i class="fas fa-envelope-open"></i>
-        </div>
-    </div>
-    <!-- <div class="theme-btn">
-        <i class="fas fa-adjust"></i>
-    </div> -->
-    <script src="app.js"></script>
+    <footer class="footer">
+        <p>Designed &amp; built by Soma Pragnya</p>
+        <p class="muted">© <span id="year"></span> SP · All rights reserved</p>
+    </footer>
+
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-
-
-
-
-
-        var typed = new Typed('#element', {
-            strings: ['a passionate technology enthusiast,', 'a software and web developer', 'and', 'an ardent explorer of the startup ecosystem.'],
-            typeSpeed: 60,
-            loop: true, // Enable looping
-            showCursor: false,
-        });
-    </script>
-
+    <script src="app.js"></script>
 </body>
 
 </html>
