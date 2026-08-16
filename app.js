@@ -79,34 +79,21 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => revealer.observe(el));
 
-    /* ---- 3D tilt on project cards ---- */
+    /* ---- gentle parallax drift on the floating motifs ---- */
     if (!prefersReduced && window.matchMedia('(pointer: fine)').matches) {
-        const MAX = 9; // degrees
-        document.querySelectorAll('.tilt').forEach(card => {
-            card.addEventListener('mousemove', (ev) => {
-                const r = card.getBoundingClientRect();
-                const px = (ev.clientX - r.left) / r.width - 0.5;
-                const py = (ev.clientY - r.top) / r.height - 0.5;
-                card.style.transform =
-                    `perspective(800px) rotateY(${px * MAX}deg) rotateX(${-py * MAX}deg) translateY(-6px)`;
+        const decor = [...document.querySelectorAll('.decor')];
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const y = window.scrollY;
+                decor.forEach((el, i) => {
+                    const depth = (i % 3 + 1) * 0.06;
+                    el.style.translate = `0 ${y * depth}px`;
+                });
+                ticking = false;
             });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-            });
-        });
-
-        /* subtle parallax tilt on the hero */
-        const heroScene = document.querySelector('.hero .tilt-scene');
-        if (heroScene) {
-            document.querySelector('.hero').addEventListener('mousemove', (ev) => {
-                const cx = window.innerWidth / 2, cy = window.innerHeight / 2;
-                const rx = (ev.clientY - cy) / cy * -3;
-                const ry = (ev.clientX - cx) / cx * 3;
-                heroScene.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-            });
-            document.querySelector('.hero').addEventListener('mouseleave', () => {
-                heroScene.style.transform = '';
-            });
-        }
+        }, { passive: true });
     }
 })();
