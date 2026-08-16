@@ -196,19 +196,6 @@ main { position: relative; z-index: 1; }
 }
 .hero-inner { max-width: 780px; position: relative; z-index: 1; }
 
-/* gold studio crest */
-.crest {
-    width: clamp(120px, 20vw, 168px);
-    margin: 0 auto 22px;
-    display: block;
-    filter: drop-shadow(0 6px 22px rgba(212, 175, 55, 0.28));
-}
-.crest-mono { font-family: 'Cinzel Decorative', serif; font-weight: 900; font-size: 52px; letter-spacing: 2px; }
-.crest-word { font-family: 'Cinzel', serif; font-weight: 600; font-size: 13px; letter-spacing: 5px; }
-.crest-shield { stroke-dasharray: 620; stroke-dashoffset: 620; }
-.reveal.visible .crest-shield { animation: drawShield 1.6s 0.2s var(--ease) forwards; }
-@keyframes drawShield { to { stroke-dashoffset: 0; } }
-
 /* ornamental divider under the name */
 .ornament { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 6px 0 4px; }
 .orn-line { width: clamp(40px, 12vw, 120px); height: 1px; background: linear-gradient(90deg, transparent, var(--violet)); }
@@ -410,6 +397,12 @@ main { position: relative; z-index: 1; }
 .media-1 { background: linear-gradient(135deg, #7a1f2b, #d4af37); }
 .media-2 { background: linear-gradient(135deg, #0f3d3a, #d4af37); }
 .media-3 { background: linear-gradient(135deg, #1a2340, #d4af37); }
+.media-4 { background: linear-gradient(135deg, #1a2340, #1f6f6b); }
+.media-5 { background: linear-gradient(135deg, #7a1f2b, #b98b24); }
+.media-6 { background: linear-gradient(135deg, #0f3d3a, #1a2340); }
+.media-7 { background: linear-gradient(135deg, #3a2a12, #d4af37); }
+.media-8 { background: linear-gradient(135deg, #2a1a3a, #b98b24); }
+.media-9 { background: linear-gradient(135deg, #12233f, #1f6f6b); }
 .project-card:hover .project-media img { transform: scale(1.08); }
 .project-body { padding: 20px 22px 24px; }
 .project-body h3 { font-size: 1.12rem; margin-bottom: 8px; }
