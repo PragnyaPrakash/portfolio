@@ -258,9 +258,21 @@ main { position: relative; z-index: 1; }
 
 /* about */
 .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 22px; }
-.skill-list { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px 18px; margin-top: 6px; }
-.skill-list li { display: flex; align-items: center; gap: 10px; color: var(--text); font-size: 0.95rem; }
-.skill-list i { color: var(--violet); width: 20px; text-align: center; }
+.skill-group { margin-top: 16px; }
+.skill-group:first-of-type { margin-top: 6px; }
+.skill-label { display: flex; align-items: center; gap: 8px; font-size: 0.82rem; letter-spacing: 0.5px; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
+.skill-label i { color: var(--violet); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips span {
+    font-size: 0.82rem;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--surface-brd);
+    color: var(--text);
+    transition: transform 0.25s var(--ease), border-color 0.25s, background 0.25s;
+}
+.chips span:hover { transform: translateY(-2px); border-color: var(--violet); background: rgba(139, 92, 246, 0.12); }
 
 /* experience */
 .experience-feature { position: relative; margin-bottom: 26px; overflow: hidden; }
@@ -281,8 +293,36 @@ main { position: relative; z-index: 1; }
     margin-bottom: 14px;
 }
 .exp-meta { color: var(--violet) !important; font-size: 0.88rem; margin: 4px 0 12px; }
+.exp-list { margin: 6px 0 0; padding-left: 18px; color: var(--muted); }
+.exp-list li { margin-bottom: 9px; font-size: 0.95rem; }
+.exp-list li::marker { color: var(--violet); }
+.exp-list strong { color: var(--text); }
 
-.journey-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; }
+.journey-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; align-items: start; }
+.inline-link { color: var(--violet); white-space: nowrap; font-size: 0.85rem; }
+.inline-link:hover { text-decoration: underline; }
+
+/* gold recognition — animated highlight */
+.gold-item { border-left-color: transparent; }
+.gold-item::before {
+    background: linear-gradient(135deg, #fff2b0, #ffcf3f 40%, #d99a1c);
+    box-shadow: 0 0 0 4px rgba(255, 200, 60, 0.18), 0 0 18px rgba(255, 200, 60, 0.7);
+    animation: goldPulse 2.4s ease-in-out infinite;
+}
+.gold-item h4 {
+    background: linear-gradient(100deg, #ffe9a3, #ffc93c 30%, #fff6d6 50%, #ffb92e 70%, #ffe9a3);
+    background-size: 220% auto;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: goldShine 3.5s linear infinite;
+}
+.gold-item p { color: #d9d2b8; }
+.gold-date { color: #ffcf3f !important; }
+.gold-trophy { color: #ffcf3f; -webkit-text-fill-color: #ffcf3f; filter: drop-shadow(0 0 6px rgba(255, 200, 60, 0.6)); margin-right: 4px; }
+@keyframes goldShine { to { background-position: 220% center; } }
+@keyframes goldPulse {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(255, 200, 60, 0.16), 0 0 14px rgba(255, 200, 60, 0.55); }
+    50% { box-shadow: 0 0 0 6px rgba(255, 200, 60, 0.28), 0 0 26px rgba(255, 200, 60, 0.95); }
+}
 .timeline-heading { display: flex; align-items: center; gap: 10px; font-size: 1.1rem; margin-bottom: 22px; }
 .timeline-heading i { color: var(--violet); }
 .tl-item {
@@ -316,6 +356,13 @@ main { position: relative; z-index: 1; }
 .project-card:hover { box-shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.8); }
 .project-media { height: 180px; overflow: hidden; transform: translateZ(0); }
 .project-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease); }
+.media-icon { display: grid; place-items: center; position: relative; }
+.media-icon i { font-size: 3.4rem; color: #fff; opacity: 0.92; transition: transform 0.6s var(--ease); z-index: 1; filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35)); }
+.project-card:hover .media-icon i { transform: scale(1.12) translateZ(20px); }
+.media-icon::after { content: ""; position: absolute; inset: 0; opacity: 0.35; background-image: radial-gradient(rgba(255, 255, 255, 0.25) 1px, transparent 1px); background-size: 16px 16px; }
+.media-1 { background: linear-gradient(135deg, #7c3aed, #ec4899); }
+.media-2 { background: linear-gradient(135deg, #059669, #22d3ee); }
+.media-3 { background: linear-gradient(135deg, #6366f1, #a855f7); }
 .project-card:hover .project-media img { transform: scale(1.08); }
 .project-body { padding: 20px 22px 24px; transform: translateZ(30px); }
 .project-body h3 { font-size: 1.12rem; margin-bottom: 8px; }

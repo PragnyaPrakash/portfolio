@@ -12,9 +12,9 @@
     if (window.Typed && document.getElementById('typed')) {
         new Typed('#typed', {
             strings: [
-                'a passionate technology enthusiast',
-                'a software &amp; web developer',
-                'an explorer of the startup ecosystem',
+                'a Software Engineer @ Bank of America',
+                'a full-stack &amp; frontend developer',
+                'an explorer of AI &amp; the startup world',
                 'a photography &amp; video enthusiast'
             ],
             typeSpeed: 55,
