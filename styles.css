@@ -337,16 +337,33 @@ main { position: relative; z-index: 1; }
 .inline-link { color: var(--violet); white-space: nowrap; font-size: 0.85rem; }
 .inline-link:hover { text-decoration: underline; }
 
-/* achievements row */
-.achieve-heading { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; margin: 46px 0 20px; }
+/* achievements — horizontal timeline */
+.achieve-heading { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; margin: 50px 0 30px; }
 .achieve-heading i { color: var(--violet); }
-.achievements { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-.achieve-card { padding: 24px 24px 26px; }
-.achieve-card .tl-date { display: block; font-size: 0.78rem; color: var(--violet); letter-spacing: 1px; margin-bottom: 6px; }
-.achieve-card h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
-.achieve-card p { color: var(--muted); font-size: 0.92rem; }
-.gold-card { border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 0 26px -6px rgba(212, 175, 55, 0.35); }
-.gold-card .tl-date { color: #e5c56b; }
+.h-timeline { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.h-timeline::before {
+    content: ""; position: absolute; top: 7px; left: 16.66%; right: 16.66%;
+    height: 2px; background: linear-gradient(90deg, transparent, var(--violet), transparent);
+    opacity: 0.65;
+}
+.h-node { text-align: center; padding: 0 6px; }
+.h-dot {
+    width: 15px; height: 15px; border-radius: 50%;
+    background: var(--grad); margin: 0 auto 20px;
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.14);
+    position: relative; z-index: 1;
+}
+.h-node .tl-date { display: block; font-size: 0.78rem; color: var(--violet); letter-spacing: 1px; margin-bottom: 6px; }
+.h-node h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+.h-node p { color: var(--muted); font-size: 0.9rem; }
+.h-node .inline-link { white-space: normal; }
+/* gold achievement node */
+.gold-node .h-dot {
+    background: linear-gradient(135deg, #e8c46a, #c6963f 45%, #9c5a1e);
+    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.22), 0 0 16px rgba(212, 175, 55, 0.6);
+    animation: goldPulse 2.4s ease-in-out infinite;
+}
+.gold-node .tl-date { color: #e5c56b; }
 
 /* gold recognition — animated highlight */
 .gold-item { border-left-color: transparent; }
@@ -355,7 +372,7 @@ main { position: relative; z-index: 1; }
     box-shadow: 0 0 0 4px rgba(198, 150, 63, 0.22), 0 0 16px rgba(198, 150, 63, 0.6);
     animation: goldPulse 2.4s ease-in-out infinite;
 }
-.gold-item h4, .gold-card h4 {
+.gold-item h4, .gold-node h4 {
     background: linear-gradient(100deg, #b98b24, #e5c56b 32%, #fbf1c8 50%, #e5c56b 68%, #b98b24);
     background-size: 220% auto;
     -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -550,7 +567,10 @@ main { position: relative; z-index: 1; }
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
     .about-grid, .journey-cols, .contact-grid { grid-template-columns: 1fr; }
-    .achievements { grid-template-columns: 1fr; }
+    .h-timeline { grid-template-columns: 1fr; gap: 22px; }
+    .h-timeline::before { display: none; }
+    .h-node { text-align: left; padding: 0; }
+    .h-dot { margin: 0 0 12px; }
     .work-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
