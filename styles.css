@@ -337,6 +337,17 @@ main { position: relative; z-index: 1; }
 .inline-link { color: var(--violet); white-space: nowrap; font-size: 0.85rem; }
 .inline-link:hover { text-decoration: underline; }
 
+/* achievements row */
+.achieve-heading { display: flex; align-items: center; gap: 10px; font-size: 1.15rem; margin: 46px 0 20px; }
+.achieve-heading i { color: var(--violet); }
+.achievements { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.achieve-card { padding: 24px 24px 26px; }
+.achieve-card .tl-date { display: block; font-size: 0.78rem; color: var(--violet); letter-spacing: 1px; margin-bottom: 6px; }
+.achieve-card h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 8px; }
+.achieve-card p { color: var(--muted); font-size: 0.92rem; }
+.gold-card { border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 0 26px -6px rgba(212, 175, 55, 0.35); }
+.gold-card .tl-date { color: #e5c56b; }
+
 /* gold recognition — animated highlight */
 .gold-item { border-left-color: transparent; }
 .gold-item::before {
@@ -344,7 +355,7 @@ main { position: relative; z-index: 1; }
     box-shadow: 0 0 0 4px rgba(198, 150, 63, 0.22), 0 0 16px rgba(198, 150, 63, 0.6);
     animation: goldPulse 2.4s ease-in-out infinite;
 }
-.gold-item h4 {
+.gold-item h4, .gold-card h4 {
     background: linear-gradient(100deg, #b98b24, #e5c56b 32%, #fbf1c8 50%, #e5c56b 68%, #b98b24);
     background-size: 220% auto;
     -webkit-background-clip: text; background-clip: text; color: transparent;
@@ -539,6 +550,7 @@ main { position: relative; z-index: 1; }
 /* ---------- responsive ---------- */
 @media (max-width: 860px) {
     .about-grid, .journey-cols, .contact-grid { grid-template-columns: 1fr; }
+    .achievements { grid-template-columns: 1fr; }
     .work-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
