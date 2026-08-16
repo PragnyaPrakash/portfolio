@@ -68,7 +68,7 @@
     }, { rootMargin: '-45% 0px -50% 0px' });
     sections.forEach(s => spy.observe(s));
 
-    /* ---- reveal on scroll ---- */
+    /* ---- reveal on scroll, with a staggered cascade per group ---- */
     const revealer = new IntersectionObserver((entries, obs) => {
         entries.forEach(e => {
             if (e.isIntersecting) {
@@ -77,7 +77,13 @@
             }
         });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => revealer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => {
+        // siblings that reveal together cascade in ~80ms apart
+        const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+        const i = sibs.indexOf(el);
+        if (i > 0) el.style.transitionDelay = Math.min(i * 0.08, 0.4) + 's';
+        revealer.observe(el);
+    });
 
     /* ---- gentle parallax drift on the floating motifs ---- */
     if (!prefersReduced && window.matchMedia('(pointer: fine)').matches) {
